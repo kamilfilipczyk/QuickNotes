@@ -2,6 +2,25 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="QuickNotes.MainPage">
-    
+    <Grid RowDefinitions="Auto, Auto, *"
+          ColumnDefinitions=".15*,.7*,.15*">
+
+        <Label Grid.Row="0" Grid.Column="0" Text="PREV"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="DATE"/>
+        <Label Grid.Row="0" Grid.Column="2" Text="NEXT"/>
+
+        <Entry Grid.Row="1" Grid.ColumnSpan="2" Placeholder="Enter a note..."/>
+        <Button Grid.Row="1" Grid.Column="2" Text="Add note"/>
+
+        <CollectionView Grid.Row="2" Grid.ColumnSpan="3">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Do laundry</x:String>
+                    <x:String>Do dishes</x:String>
+                    <x:String>Practice programming</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+        </CollectionView>
+    </Grid>
 
 </ContentPage>
