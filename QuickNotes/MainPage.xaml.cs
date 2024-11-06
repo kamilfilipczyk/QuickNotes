@@ -1,11 +1,14 @@
-﻿namespace QuickNotes
+﻿using QuickNotes.ViewModel;
+
+namespace QuickNotes
 {
     public partial class MainPage : ContentPage
     {
 
-        public MainPage()
+        public MainPage(MainViewModel vievModel)
         {
             InitializeComponent();
+            BindingContext = vievModel;
         }
 
         
