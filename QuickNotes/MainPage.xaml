@@ -9,7 +9,7 @@
         <Label Grid.Row="0" Grid.Column="1" Text="DATE"/>
         <Label Grid.Row="0" Grid.Column="2" Text="NEXT"/>
 
-        <Entry Grid.Row="1" Grid.ColumnSpan="2" Placeholder="Enter a note..."/>
+        <Entry Grid.Row="1" Grid.ColumnSpan="2" Placeholder="Enter a note..." Text="{Binding NewNote}"/>
         <Button Grid.Row="1" Grid.Column="2" Text="Add note"/>
 
         <CollectionView Grid.Row="2" Grid.ColumnSpan="3">
